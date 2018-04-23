@@ -1,0 +1,24 @@
+﻿@model JustBlog.Core.Object.Tag
+
+@{
+    Layout = null;
+}
+@helper Tags(System.Web.Mvc.HtmlHelper htmlHelper, IList<JustBlog.Core.Object.Tag> tags)
+    {
+        foreach (var tag in tags)
+        {
+            <div class="tags-div">@JustBlog.ActionLinkExtensions.TagLink(htmlHelper, tag)</div>
+        }
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Helpers</title>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
